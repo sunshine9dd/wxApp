@@ -1,0 +1,46 @@
+/* pages/myShop/myShop.wxss */
+.myShop{
+  padding-bottom: 30rpx;
+}
+.myShop .header{
+  position: relative;
+  padding: 0 20rpx;
+  font-size: 34rpx;
+}
+.myShop .header>image{
+  width: 100%;
+}
+.myShop .header .nameBox{
+  background-color: rgba(0,0,0,.1);
+  position: absolute;
+  width: 100%;
+  left: 0;bottom: 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #FFFFFF;
+  letter-spacing: -0.82rpx;
+}
+.myShop .ul{
+  padding: 0 20rpx;
+}
+.ul>.title{
+  padding: 20rpx 0;
+  border-bottom: 4rpx solid #f5f5f5;
+  font-size: 30rpx;
+}
+.myShop .ul .li{
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 140rpx;
+  margin: 20rpx 0;
+  font-size: 32rpx;
+}
+.myShop .ul .li text{
+  position: absolute;
+  left: 0;top: 0;
+  font-size: 32rpx;
+  color: #333333;
+  letter-spacing: -0.30rpx;
+}

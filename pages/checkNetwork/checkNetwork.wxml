@@ -1,0 +1,7 @@
+<!--pages/checkNetwork/checkNetwork.wxml-->
+<view class="index" wx:if="{{noNetwork}}">
+    <view class="noList">
+        <view class="img"><image mode="widthFix" src="/images/icon/img_nonet@2x.png"></image></view>
+        <view class="words">网络不好，检查后<text bindtap="refreshFn">刷新</text>试试呢</view>
+    </view>
+</view>

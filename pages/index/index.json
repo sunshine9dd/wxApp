@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "三喜匠人",
+  "usingComponents": {
+    "active-item": "../../components/activeItem/activeItem"
+  }
+}

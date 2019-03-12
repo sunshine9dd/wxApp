@@ -1,0 +1,144 @@
+.by-order {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  height: calc(100vh - 98rpx);
+}
+
+.content--header {
+  width: 100%;
+  min-height: 200rpx;
+  padding:0 30rpx;
+}
+
+.content--header>view {
+  width: 100%;
+  min-height: 200rpx;
+  border-bottom: 1rpx solid #E8E8E8;
+}
+
+.content--header--img, .content--header--img>image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.content--header--info {
+  flex: 1;
+  min-height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20rpx 30rpx;
+}
+
+.content--header--info>view:nth-child(1),
+.content--header--info>view:nth-child(2) {
+  width: calc(100vw - 250rpx);
+  min-height: 50rpx;
+  font-size: 36rpx;
+  color: #333;
+  line-height: 50rpx;
+}
+
+.content--header--info--money>text:nth-child(1) {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.content--header--info--money>text:nth-child(2) {
+  font-size: 30rpx;
+  color: #ff2283;
+  margin-left: 10rpx;
+}
+
+.content--header--info--money>text:nth-child(3) {
+  font-size: 24rpx;
+  color: #bcbcbc;
+  margin-left: 30rpx;
+}
+
+.content--form {
+  width: 100%;
+  height: 95rpx;
+  padding:0 30rpx;
+}
+
+.content--form>view {
+  width: 100%;
+  height: 95rpx;
+  padding-right: 30rpx;
+  border-bottom: 1rpx solid #E8E8E8;
+}
+
+.content--form>view {
+  display: flex;
+}
+
+.content--form>view>view {
+  flex: 1;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.content--remark {
+  width: 100%;
+  min-height: 50rpx;
+  padding: 30rpx;
+  align-items: flex-start !important;
+}
+
+.content--remark>view:nth-child(1){
+  display: flex;
+  align-items: center;
+  margin-top: 5rpx;
+}
+
+.content--remark>view:nth-child(1), .content--remark>view:nth-child(1)>image {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+
+
+.content--remark>view:nth-child(2) {
+  flex: 1;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 33rpx;
+  padding-left: 10rpx;
+}
+
+.footer {
+  width: 100%;
+  height: 98rpx;
+}
+
+.footer--left {
+  flex: 1;
+  width: calc(100vw - 300rpx);
+  height: 98rpx;
+  border-top: 1rpx solid #E8E8E8;
+  padding: 0 30rpx;
+  overflow: hidden;
+}
+
+.footer--left>text:nth-child(1) {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.footer--left>text:nth-child(2) {
+  font-size: 34rpx;
+  color: #FF2283;
+}
+
+.footer--right {
+  width: 300rpx;
+  height: 98rpx;
+  background: linear-gradient(-90deg, #FF509D, #FF2283);
+  font-size: 34rpx;
+  color: #fff;
+}

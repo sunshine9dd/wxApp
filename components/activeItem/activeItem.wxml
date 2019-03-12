@@ -1,0 +1,20 @@
+<view class='active-item' bindtap='goSeckill' data-id='{{item.beautyServiceId}}' wx:for="{{beautyServiceInfoTableList}}" wx:key="{{key}}">
+  <view class='active-item--info flex-center'>
+    <view class='active-item--info--img'>
+      <image src='{{item.beautyServiceImageUrl}}' mode='aspectFill'></image>
+    </view>
+    <view class='active-item--info--content flex-center'>
+      <view class='info--content--text'>
+        <view class='info-title'>{{item.beautyServiceName}}</view>
+        <view class='info-money flex-left'> 
+          <text>预付：</text> 
+          <text>￥{{item.prePayAmount}}</text> 
+          <text>总价：￥{{item.totalPayAmount}}</text>
+        </view>
+        <view class='flex-left volumeAndScore'>销量 {{item.beautyServiceSaledNum}}<text>评分</text>
+         <image wx:for='{{item.beautyServiceRank}}' src='../../assets/img/star.png' wx:key='{{key}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

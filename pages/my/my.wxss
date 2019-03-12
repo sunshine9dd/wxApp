@@ -1,0 +1,109 @@
+.my {
+  position: relative;
+}
+
+.login {
+  width: 100%;
+  height: 300rpx;
+  padding: 0 30rpx;
+  padding-right: 40rpx;
+}
+
+.login>view {
+  height: 200rpx;
+  margin: 50rpx auto;
+}
+
+.login>view:nth-child(1) {
+  flex: 1;
+  font-size: 64rpx;
+  color: #333;
+}
+
+.login>view:nth-child(2) {
+  width: 200rpx;
+}
+
+.login>view:nth-child(2)>image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.no-login {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30rpx;
+}
+
+.no-login>view:nth-child(1) {
+  height: 90rpx;
+  font-size: 64rpx;
+  color: #333;
+}
+
+.no-login>view:nth-child(2) {
+  font-size: 32rpx;
+  color: #666;
+}
+
+.do-item {
+  width: 100%;
+  height: 122rpx;
+  padding: 0 30rpx;
+  border-top: 1rpx solid #e3e3e3;
+}
+.do-item:last-of-type{
+   border-bottom: 1rpx solid #e3e3e3;
+}
+.do-item  .navBox{
+  width: 125rpx;
+  display: inline-block;
+  margin: 20rpx 0;
+}
+.do-item navigator{
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+}
+.do-item navigator image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.do-item:active{
+  background:#f5f5f5;
+}
+
+.do-item>view {
+  height: 100rpx;
+}
+
+.do-item>view.flex-center{
+  width: 50rpx;
+}
+
+.do-item>view.flex-left{
+  flex: 1;
+  padding-left: 30rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.do-item>view:nth-child(1)>image {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.do-item>view:nth-child(3)>image {
+  width: 16rpx;
+  height: 30rpx;
+}
+.extension{
+  width: 100%;
+  position: fixed;
+  left: 0;bottom: 0;
+}

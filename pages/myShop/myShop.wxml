@@ -1,0 +1,28 @@
+<!--pages/myShop/myShop.wxml-->
+<view class='myShop'>
+    <view class='header'>
+        <image src='{{shopImageUrl}}' mode='widthFix'></image>
+    </view>
+    <view class='ul'>
+        <view class='li'>
+            <text>店主姓名:</text>
+            {{shopOwnerName}}
+        </view>
+        <view class='li'>
+            <text>店铺名称:</text>
+            {{shopName}}
+        </view>
+        <view class='li'>
+            <text>联系电话:</text>
+            {{shopOwnerPhone}}
+        </view>
+        <view class='li'>
+            <text>店铺地址:</text>
+            {{shopAddress}}
+        </view>
+        <view class='li'>
+            <text>经营范围:</text>
+            {{businessScope}}
+        </view>
+    </view>
+</view>

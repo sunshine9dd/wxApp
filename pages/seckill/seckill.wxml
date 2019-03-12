@@ -1,0 +1,15 @@
+<view class="container seckill">
+  <commodity-header starInfo="{{starInfo}}" imgUrls="{{imgUrls}}"></commodity-header>
+  <view class='evaluate'>
+    <view class='h2'>商品评价</view>
+    <view class="noList" wx:if="{{evaluationTableList.length ==0}}">暂时没有相关评价</view>
+    <view class='evaluateBox' wx:for='{{evaluationTableList}}' wx:key='{{key}}'>
+      <view class='header'><image src='{{item.headPortraitUrl}}'></image>{{item.nickname}}<text>{{item.evalutionDatetime}}</text></view>
+      <view class='content'>{{item.evalutionContent}}</view>
+      <image class='appraiseImg' wx:for="{{item.imageInfoList}}" wx:key="{{ind}}" wx:for-item="img"  src='{{img.imagePath}}'></image>
+    </view>
+  </view>
+  <view class='pay-footer flex-center' bindtap='goBuySecKillOrder'>
+    立即购买
+  </view>
+</view>

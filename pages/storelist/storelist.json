@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "门店列表",
+  "usingComponents": {
+    "boss-info": "../../components/boss/boss"
+  }
+}

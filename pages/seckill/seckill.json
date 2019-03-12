@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "活动详情",
+  "usingComponents": {
+    "commodity-header": "../../components/commodityHeader/commodityHeader"
+  }
+}

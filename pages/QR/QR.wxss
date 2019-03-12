@@ -1,0 +1,14 @@
+/* pages/QR/QR.wxss */
+.QR{
+  text-align: center;
+  padding-top: 100rpx;
+  position: relative;
+}
+.QR .h2{
+  font-size: 32rpx;
+}
+.QR canvas{
+  width: 400rpx;
+  height: 400rpx;
+  margin: 100rpx auto;
+}

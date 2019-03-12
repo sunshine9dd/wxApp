@@ -1,0 +1,16 @@
+<view class='container active'>
+  <view class='header flex-left'>
+    <view data-index="{{'0'}}" bindtap='changeCurIndex' class="header-tab flex-left {{curIndex==0?'header-tab__active':''}}">销量</view>
+    <view data-index="{{'1'}}" bindtap='changeCurIndex' class="header-tab flex-left {{curIndex==1?'header-tab__active':''}}">评价</view>
+  </view>
+  <swiper class='active-swiper' bindchange="changeSwiper" circular="{{circular}}" current="{{curIndex}}" style="height: {{scrollBoxHeight}}rpx;">
+    <swiper-item class="active-swiper--item">
+      <active-item beautyServiceInfoTableList="{{salesVolumeList}}"></active-item>
+      <view class="noList" wx:if="{{salesVolumeList.length ==0}}">暂时没有相关活动</view>
+    </swiper-item>
+    <swiper-item class="active-swiper--item">
+      <active-item beautyServiceInfoTableList="{{scoreList}}"></active-item>
+      <view class="noList" wx:if="{{scoreList.length ==0}}">暂时没有相关活动</view>
+    </swiper-item>
+  </swiper>
+</view>

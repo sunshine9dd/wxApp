@@ -1,0 +1,39 @@
+<view class='commodity-header'>
+  <view class='header'>
+   <swiper wx:if="{{imgUrls.length>0}}" class="swiper" style="height: 250rpx" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}" interval="6000" duration="1000">
+              <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+                  <swiper-item data-ind="{{index}}">
+                      <image src="{{item.imagePath}}" mode='aspectFill'></image>
+                  </swiper-item>
+              </block>
+     </swiper>        
+  </view>
+  <view class='info'>
+    <view class="flex-left">
+      <view class='info--money'>
+        <text>预付</text>
+        <text>￥{{starInfo.prePayAmount}}</text>
+        <text>总价：￥{{starInfo.totalPayAmount}}</text>
+      </view>
+    </view>
+    <view class='info--title'>
+      {{starInfo.beautyServiceName}}
+    </view>
+    <view class='info--describe'>
+      {{starInfo.beautyServiceSpecification}}
+    </view>
+    <view class='info--stroe flex-left'>
+      <view class='info--stroe-name'>
+        {{starInfo.beautyServiceDescription}}
+      </view>
+      <view class='info-count info-count__small' >
+        已销售{{starInfo.beautyServiceSaledNum}}
+      </view>
+    </view>
+    <view class='info--remark flex-left'>
+    评分：
+         <image src='../../assets/img/star.png' wx:for='{{starInfo.beautyServiceRank}}' wx:key="{{key}}"></image>
+    </view>
+  </view>
+  <view class='detail'><image src='{{starInfo.beautyServiceDetailImageUrl}}' mode='widthFix'></image></view>
+</view>

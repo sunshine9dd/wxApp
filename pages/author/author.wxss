@@ -1,0 +1,43 @@
+/* pages/author/author.wxss */
+.author{
+    text-align: center;
+}
+.canUse{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+.img{
+    margin: 142rpx 0 112rpx;
+    width: 160rpx;
+    height: 160rpx;
+}
+.title{
+    margin-bottom: 78rpx;
+    padding: 0 40rpx;
+    font-size: 34rpx;
+    font-weight: 600;
+    color: #333;
+}
+.tip{
+    margin-bottom: 400rpx;
+    font-size: 28rpx;
+    color: #808080;
+    width: 52.8%;
+}
+.btn{
+    background-color: #44B028;
+    border: 2rpx solid #417505;
+    border-radius: 4rpx;
+    font-size: 28rpx;
+    color: #FFF;
+    width: 78%;
+    height: 86rpx;
+    line-height: 86rpx;
+}
+
+.canNo{
+    margin-top: 200rpx;
+}

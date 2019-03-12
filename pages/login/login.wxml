@@ -1,0 +1,53 @@
+<view class="bind">
+<image class='bg' src='../../assets/img/bg1.jpg' mode='widthFix'></image>
+    <view class="title">账号绑定</view>
+    <view class='inputBox'>
+      <input type='text' data-type='nickname' bindinput='bindInput' placeholder="请输入昵称" auto-focus value='{{nickname}}'/>
+    </view>
+    <view class='inputBox'>
+      <input type='number' data-type='mobile' bindinput='bindInput' maxlength='11' placeholder="请输入手机号" value='{{mobile}}'/>
+    </view>
+    <view class='inputBox'>
+      <input type='text' data-type='password' bindinput='bindInput' placeholder="请输入密码" password='{{true}}' value='{{password}}'/>
+    </view>
+    <view class='inputBox'>
+       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" mode ='selector'>
+        <view class="picker">{{array[index]}}</view>
+      </picker>
+      <image class='rightImg right' src='../../assets/img/rightarrow.png'></image>
+    </view>
+    <view wx:if='{{flag == 1}}'>
+      <view class='inputBox'>
+        <input data-type='shopCode' bindinput='bindInput' placeholder="请输入邀请码" value='{{shopCode}}'/>
+        <image class='rightImg' src='../../assets/img/sao.png' data-type='1' bindtap='scanFn'></image>
+      </view>
+      <!-- <view class='inputBox'>
+        <input data-type='userCode' bindinput='bindInput' placeholder="请输入用户邀请码(可不填)" value='{{userCode}}'/>
+        <image class='rightImg' src='../../assets/img/sao.png' data-type='2' bindtap='scanFn'></image>
+      </view> -->
+    </view>
+    <view  wx:else>
+    <view class='inputBox'>
+        <input data-type='shopOwnerName' bindinput='bindInput' type='text' placeholder="请输入店主姓名" value='{{shopOwnerName}}'/>
+      </view>
+      <view class='inputBox'>
+        <input data-type='shopName' bindinput='bindInput' type='text' placeholder="请输入店铺名称" value='{{shopName}}'/>
+      </view>
+      <view class='inputBox'>
+        <input data-type='shopAddress' bindinput='bindInput' type='text' placeholder="请输入店铺地址" value='{{shopAddress}}'/>
+        <image class='rightImg' src='../../assets/img/address.png' bindtap='addressFn'></image>
+      </view>
+      <view class='inputBox'>
+        <input data-type='businessCode' bindinput='bindInput' type='text' placeholder="请输入业务人员邀请码" value='{{businessCode}}'/>
+        <image class='rightImg' src='../../assets/img/sao.png' data-type='3' bindtap='scanFn'></image>
+      </view>
+      <view class='inputBox'>
+        <textarea data-type='shopRange' bindinput='bindInput' auto-height placeholder="请输入店铺经营范围" value='{{shopRange}}'/>
+      </view>
+      <view class='inputBox' style='text-align: center;padding-right:0;'>
+        <image class='addImg' style="width:{{wh}}" bindtap='imgFn' src='{{imgSrc?imgSrc:"../../assets/img/addImg.png"}}' mode='widthFix'></image>
+        <text>店铺封面图</text>
+      </view>
+    </view>
+    <button bindtap="goNext">确定</button>
+</view>

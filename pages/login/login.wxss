@@ -1,0 +1,60 @@
+/* pages/login/login.wxss */
+.bind{
+  padding: 0 20rpx;
+  position: relative;
+  padding-top: 134rpx;
+  height: 100%;
+}
+.bind>.title{
+  font-weight: 600;
+  font-size: 20px;
+  color: #3C3C3C;
+  margin-bottom: 96rpx;
+}
+.inputBox{
+  padding: 20rpx 0;
+  padding-right: 60rpx;
+  border-bottom: 1px solid #e3e3e3;
+  position: relative;
+}
+.inputBox input{
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.inputBox textarea{
+  font-size: 28rpx;
+  color: #333;
+}
+.picker{
+  font-size: 28rpx;
+  color: #333;
+}
+.inputBox image.rightImg{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  right: 0;top: 0;bottom: 0;
+  margin: auto;
+}
+.inputBox image.right{
+  width: 24rpx;
+  height: 44rpx;
+  right: 10rpx;
+  transform: rotate(90deg);
+}
+.inputBox .addImg{
+  display: block;
+  margin: 10rpx auto;
+}
+button{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 50rpx auto;
+  display: block;
+  color: #fff;
+  background-color: #ff2283;
+}

@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container index">
+<image class='bg' src='../../assets/img/bg8.jpg' mode='widthFix'></image>
+  <view class='header'>
+    <swiper wx:if="{{imgUrls.length>0}}" class="swiper" style="height: 250rpx" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{autoplay}}" interval="6000" duration="1000">
+              <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+                  <swiper-item data-ind="{{index}}">
+                      <image wx:if="{{item.type == 'IMG'}}" src="{{item.src}}" mode='aspectFill'></image>
+                      <video wx:else src='{{item.src}}' initial-time="1" bindplay="bindplayFn" bindpause="bindpauseFn" bindended="bindendedFn" show-fullscreen-btn="{{false}}"></video>
+                  </swiper-item>
+              </block>
+    </swiper>
+  </view>
+  <view class='flex-center small-title'>
+    <view class='flex-left small-title-view'>推荐活动</view>
+    <view class='flex-right small-title-vice-view' bindtap='goOrderCenter'>查看全部</view>
+  </view>
+  <active-item beautyServiceInfoTableList="{{beautyServiceInfoTableList}}"></active-item>
+  <view class="noList" wx:if="{{beautyServiceInfoTableList.length ==0}}">暂时没有相关活动</view>
+</view>

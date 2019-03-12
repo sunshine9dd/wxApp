@@ -1,0 +1,49 @@
+/* pages/myRebate/myRebate.wxss */
+page{
+  background-color: #f5f5f5;
+}
+.myRebate{
+  position: relative;
+}
+.myRebate .header{
+  padding: 30rpx 10rpx;
+  text-align: center;
+  color: #000;
+  font-size: 32rpx;
+  background-color: #fff;
+}
+.myRebate .header view:nth-of-type(2){
+  font-size: 28rpx;
+  color: #FF2283;
+  margin-top: 20rpx;
+}
+.myRebate .header view:nth-of-type(2) text{
+  font-size: 48rpx;
+  color: #FF2283;
+}
+.myRebate .p{
+  width: 95%;
+  margin: 20rpx auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.myRebate .p .name{
+  font-size: 28rpx;
+}
+.myRebate .p .amount{
+  display: flex;
+}
+.myRebate .p .amount view{
+  flex: 1;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+.myRebate .p .amount view:nth-of-type(2){
+  text-align: right;
+}
+.myRebate .p .amount view text{
+  color: #FF2283;
+}

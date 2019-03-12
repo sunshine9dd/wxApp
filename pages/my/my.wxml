@@ -1,0 +1,68 @@
+<view class='container my'>
+<image class='bg' src='../../assets/img/bg3.jpg' mode='widthFix'></image>
+  <view class='login flex-center' bindtap='goMineFn'>
+    <view class='flex-left'>
+      <text>{{nickName}}</text>
+    </view>
+    <view class='flex-center'>
+      <image src='{{avatarUrl}}'></image>
+    </view>
+  </view>
+  <view class='do-item' style='padding:0;height:140rpx'>
+     <view class='navBox'>
+        <navigator url='../orderlist/orderlist?orderStatus=1'>
+          <image src='../../assets/img/icon_pay.png'></image>
+          <view>待付款</view>
+        </navigator>
+      </view>
+      <view class='navBox'>
+        <navigator url='../orderlist/orderlist?orderStatus=2'>
+          <image src='../../assets/img/icon_cancel.png'></image>
+          <view>已取消</view>
+        </navigator>
+      </view>
+      <view class='navBox'>
+        <navigator url='../orderlist/orderlist?orderStatus=3'>
+          <image src='../../assets/img/icon_advance.png'></image>
+          <view>预付款</view>
+        </navigator>
+      </view>
+      <view class='navBox'>
+        <navigator url='../orderlist/orderlist?orderStatus=4'>
+          <image src='../../assets/img/icon_distribution.png'></image>
+          <view>待分配</view>
+        </navigator>
+      </view>
+      <view class='navBox'>
+        <navigator url='../orderlist/orderlist?orderStatus=5'>
+          <image src='../../assets/img/icon_tail.png'></image>
+          <view>付尾款</view>
+        </navigator>
+      </view>
+      <view class='navBox'>
+        <navigator url='../orderlist/orderlist?orderStatus=6'>
+          <image src='../../assets/img/icon_evaluate.png'></image>
+          <view>已完成</view>
+        </navigator>
+      </view>
+  </view>
+  <view class='do-item flex-center' bindtap='goMyShop' wx:if="{{flag == 2}}">
+    <view class='flex-center'>
+      <image src='../../assets/img/storeheader.png' style='width:50rpx;height:50rpx;'></image>
+    </view>
+    <view class='flex-left'>我的店铺</view>
+    <view class='flex-center'>
+      <image src='../../assets/img/rightarrow.png'></image>
+    </view>
+  </view>
+  <view class='do-item flex-center' bindtap='goMyRebate'>
+    <view class='flex-center'>
+      <image src='../../assets/img/youhui.png'></image>
+    </view>
+    <view class='flex-left'>我的返利</view>
+    <view class='flex-center'>
+      <image src='../../assets/img/rightarrow.png'></image>
+    </view>
+  </view>
+  <image src='../../assets/img/bg6.jpg' mode='widthFix' class='extension'></image>
+</view>

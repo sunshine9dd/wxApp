@@ -1,0 +1,31 @@
+.active {
+  background-color: #fff;
+}
+
+.header {
+  width: 100%;
+  height: 90rpx;
+  padding: 0 30rpx;
+}
+
+.header-tab {
+  width: 140rpx;
+  height: 90rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.header-tab__active {
+  font-size: 40rpx;
+  color: #333;
+}
+
+.active-swiper{
+  width: 100%;
+}
+
+/* .active-swiper--item{
+  width: 100%;
+  height: calc(100vh - 90rpx);
+  color: #fff
+} */

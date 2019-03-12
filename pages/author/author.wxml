@@ -1,0 +1,10 @@
+<!--pages/author/author.wxml-->
+<view class="author">
+    <view class="canUse" wx:if="{{canIUse}}">
+        <image class="img" src="/assets/img/noAuthor.png"></image>
+        <view class="title">您尚未授权，无法访问三喜匠人</view>
+        <view class="tip">若重新授权不成功，请稍等数分钟或删除小程序使用记录后重试</view>
+        <button class="btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGetUserInfo">授权登录</button>
+    </view>
+    <view class="canNo" wx:else>请升级微信版本</view>
+</view>

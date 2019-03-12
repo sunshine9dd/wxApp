@@ -1,0 +1,15 @@
+<!--pages/myRebate/myRebate.wxml-->
+<view class='myRebate'>
+<image class='bg' src='../../assets/img/bg5.jpg' mode='widthFix'></image>
+  <view class='header'>
+     <view>累计返利</view>
+     <view><text>{{profitTotalAmount}}</text>元</view>
+  </view>
+  <view class='p' wx:for="{{list}}" wx:key="{{key}}">
+     <view class='name'>{{item.profitContent}}</view>
+     <view class='amount'>
+       <view>{{item.createDateTime}}</view>
+       <view>返利<text>{{item.profitAmount}}</text>元</view>
+     </view>
+  </view>
+</view>

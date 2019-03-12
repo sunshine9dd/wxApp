@@ -1,0 +1,71 @@
+<view class='order-item'>
+  <view class='orderNav'>
+    <view class='{{status==1?"checked":""}}' data-index='1' bindtap='orderTypeFn'>待付款</view>
+    <view class='{{status==2?"checked":""}}' data-index='2' bindtap='orderTypeFn'>已取消</view>
+    <view class='{{status==3?"checked":""}}' data-index='3' bindtap='orderTypeFn'>预付款</view>
+    <view class='{{status==4?"checked":""}}' data-index='4' bindtap='orderTypeFn'>待分配</view>
+    <view class='{{status==5?"checked":""}}' data-index='5' bindtap='orderTypeFn'>付尾款</view>
+    <view class='{{status==6?"checked":""}}' data-index='6' bindtap='orderTypeFn'>已完成</view>
+  </view>
+  <view class="noList" wx:if="{{beautyInfoOrderTableList.length ==0}}">暂时没有相关订单</view>
+  <view class='order-item--info' bindtap='goOrderInfo' data-index='{{key}}' wx:for="{{beautyInfoOrderTableList}}" wx:key="{{key}}">
+    <view class='item--header flex-left'>
+      <view class='flex-left'>
+        <image src='../../assets/img/sp.jpg'></image>
+      </view>
+      <view>九和匠人</view>
+      <view class='order-type flex-right'>
+        <text class='order-type__red' wx:if="{{item.orderStatus == 1}}">待付款</text>
+        <text class='order-type__black' wx:if="{{item.orderStatus == 2}}">已取消</text>
+        <text class='order-type__green' wx:if="{{item.orderStatus == 3}}">预付款</text>
+        <text class='order-type__green' wx:if="{{item.orderStatus == 4}}">待分配</text>
+        <text class='order-type__red' wx:if="{{item.orderStatus == 5}}">付尾款</text>
+        <text class='order-type__green' wx:if="{{item.orderStatus == 6}}">已完成</text>
+      </view>
+    </view>
+    <view class='item--content flex-left' data-id='{{item.beautyOrderId}}' bindtap='goDetailFn'>
+      <view>
+        <image src='{{item.beautyServiceImageUrl}}'></image>
+      </view>
+      <view class='item-content--title'>
+        <view>{{item.beautyServiceName}}</view>
+      </view>
+      <view class='item-content--count flex-center'>
+        <view>¥{{item.prePayAmount}}</view>
+        <view>总价：¥{{item.totalPayAmount}}</view>
+      </view>
+    </view>
+    <view class='item-info' wx:if="{{item.orderStatus >=3}}">
+        <view>预付款时间：</view>
+        <view>{{item.prePayDateTime}}</view>
+    </view>
+    <view class='item-info' wx:if="{{item.orderStatus >=5}}">
+        <view>付尾款时间：</view>
+        <view>{{item.payDateTime}}</view>
+    </view>
+    <view class='item-info' wx:if="{{item.orderStatus>=4}}">
+      <view>美容师姓名：</view>
+      <view>{{item.beautyStaffName}}</view>
+    </view>
+    <view class='item-info' wx:if="{{item.orderStatus>=4}}">
+      <view>美容师电话：</view>
+      <view>{{item.beautyStaffPhone}}</view>
+    </view>
+    <view class='item--footer flex-right' wx:if="{{item.orderStatus<=3}}">
+      <text>预付款：</text>
+      <text>￥{{item.prePayAmount}}</text>
+    </view>
+    <view class='item--footer flex-right' wx:if="{{item.orderStatus==4}}">
+      <text>尾款：</text>
+      <text>￥{{item.payAmount}}</text>
+    </view>
+    <view class='item--btn' wx:if="{{item.orderStatus !=2 && item.orderStatus !=3 && item.orderStatus != 6}}">
+      <view class='orderBtn'>
+        <view wx:if="{{item.orderStatus == 1}}" data-type='1' data-id='{{item.beautyOrderId}}' bindtap='prevPayFn' class='item--btn--paybtn flex-center'>去付款</view>
+        <view wx:if="{{item.orderStatus == 1}}" data-id='{{item.beautyOrderId}}' data-index='{{key}}' class='item--btn--paybtn flex-center cancelBtn' bindtap='cancelFn'>取消</view>
+        <view wx:if="{{item.orderStatus == 4}}" data-type='2' data-id='{{item.beautyOrderId}}' bindtap='prevPayFn' class='item--btn--paybtn flex-center'>付尾款</view>
+        <view wx:if="{{item.orderStatus == 5}}" data-id='{{item.beautyOrderId}}' data-index='{{key}}' class='item--btn--paybtn flex-center' data-service='{{item.beautyServiceIdFk}}' bindtap='goAppraiseFn'>去评价</view>
+      </view>
+    </view>
+  </view>
+</view>

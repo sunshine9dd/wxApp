@@ -1,0 +1,145 @@
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flex-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.active-item {
+  width: 100%;
+  height: 170rpx;
+  padding: 0 30rpx;
+  margin: 15rpx 0;
+}
+
+.active-item--info {
+  width: 100%;
+  height: 170rpx;
+  box-shadow: 0px 2rpx 8rpx 0rpx #EDEDED;
+  border-radius: 16rpx;
+  border: 1rpx solid #EDEDED;
+}
+
+.active-item--info--img, .active-item--info--img>image {
+  width: 180rpx;
+  height: 170rpx;
+  border-top-left-radius: 16rpx;
+  border-bottom-left-radius: 16rpx;
+}
+
+.active-item--info--content {
+  flex: 1;
+  padding: 0rpx 20rpx;
+  padding-left: 35rpx;
+  margin: 0rpx;
+}
+
+.active-item--info--content>view {
+  min-height: 100rpx;
+  max-height: 190rpx;
+}
+
+.info--content--btn {
+  height: 170rpx;
+  width: 138rpx;
+  align-items: flex-end !important;
+  padding-bottom: 10rpx;
+}
+
+.btn-collage {
+  width: 112rpx;
+  height: 62rpx;
+  background: #ff2283;
+  box-shadow: 0px 2rpx 10rpx 1rpx #FFC6DF;
+  border-radius: 31rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.info--content--text {
+  flex: 1;
+}
+
+.info-title {
+  font-size: 30rpx;
+  color: #333;
+  width: 390rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info-money {
+  width: 390rpx;
+  height: 50rpx;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 9rpx;
+}
+
+.info-money>text:nth-child(1) {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.info-money>text:nth-child(2) {
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  color: #ff8cbf;
+}
+
+.info-money>text:nth-child(3) {
+  font-size: 26rpx;
+  color: #BCBCBC;
+}
+
+.info-count {
+  min-width: 198rpx;
+  height: 38rpx;
+  background: #FFF3F8;
+  border-radius: 4rpx;
+  border: 1rpx solid #FF95C4;
+  display: inline-block;
+  font-size:22rpx;
+  color:#FF2283;
+  text-align: center;
+  line-height: 38rpx;
+  padding: 0 5rpx;
+}
+
+.btn-collage__kill {
+  width: 128rpx;
+  font-size: 22rpx;
+}
+
+.btn-collage__cant {
+  background: #ff8cbf;
+}
+.volumeAndScore{
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color:#BCBCBC;
+}
+.volumeAndScore text{
+  margin-left: 20rpx;
+}
+.volumeAndScore image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}

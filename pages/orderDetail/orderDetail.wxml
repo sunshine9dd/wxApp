@@ -1,0 +1,77 @@
+<!--pages/orderDetail/beautyInfoOrderTable.wxml-->
+<view class='order-item'>
+  <view class='order-item--info' bindtap='goOrderInfo'>
+    <view class='item--header flex-left'>
+      <view class='flex-left'>
+        <image src='../../assets/img/sp.jpg'></image>
+      </view>
+      <view>九和匠人</view>
+      <view class='order-type flex-right'>
+        <text class='order-type__red' wx:if="{{beautyInfoOrderTable.orderStatus == 1}}">待付款</text>
+        <text class='order-type__black' wx:if="{{beautyInfoOrderTable.orderStatus == 2}}">已取消</text>
+        <text class='order-type__green' wx:if="{{beautyInfoOrderTable.orderStatus == 3}}">预付款</text>
+        <text class='order-type__green' wx:if="{{beautyInfoOrderTable.orderStatus == 4}}">待分配</text>
+        <text class='order-type__red' wx:if="{{beautyInfoOrderTable.orderStatus == 5}}">付尾款</text>
+        <text class='order-type__green' wx:if="{{beautyInfoOrderTable.orderStatus == 6}}">已完成</text>
+      </view>
+    </view>
+    <view class='item--content flex-left' data-id='{{beautyInfoOrderTable.beautyOrderId}}' bindtap='goDetailFn'>
+      <view>
+        <image src='{{beautyInfoOrderTable.beautyServiceImageUrl}}'></image>
+      </view>
+      <view class='item-content--title'>
+        <view>{{beautyInfoOrderTable.beautyServiceName}}</view>
+      </view>
+      <view class='item-content--count flex-center'>
+        <view>¥{{beautyInfoOrderTable.prePayAmount}}</view>
+        <view>总价：¥{{beautyInfoOrderTable.totalPayAmount}}</view>
+      </view>
+    </view>
+    <view class='item--footer flex-right'>
+      <text>预付款：</text>
+      <text>￥{{beautyInfoOrderTable.prePayAmount}}</text>
+    </view>
+    <view class='item--footer flex-right' wx:if="{{beautyInfoOrderTable.orderStatus >= 4}}">
+      <text>尾款：</text>
+      <text>￥{{beautyInfoOrderTable.payAmount}}</text>
+    </view>
+    <view class='item--btn footerNav' wx:if="{{beautyInfoOrderTable.orderStatus !=2 && beautyInfoOrderTable.orderStatus !=3 && beautyInfoOrderTable.orderStatus != 6}}">
+      <view class='orderBtn'>
+        <view wx:if="{{beautyInfoOrderTable.orderStatus == 1}}" bindtap='prevPayFn' class='item--btn--paybtn flex-center'>去付款</view>
+        <view wx:if="{{beautyInfoOrderTable.orderStatus == 1}}" data-id='{{beautyInfoOrderTable.beautyOrderId}}' class='item--btn--paybtn flex-center cancelBtn' data-index='{{index}}' bindtap='cancelFn'>取消</view>
+        <view wx:if="{{beautyInfoOrderTable.orderStatus == 4}}" class='item--btn--paybtn flex-center' bindtap='prevPayFn'>付尾款</view>
+        <view wx:if="{{beautyInfoOrderTable.orderStatus == 5}}" data-id='{{beautyInfoOrderTable.beautyOrderId}}' class='item--btn--paybtn flex-center' data-index='{{index}}' data-service='{{item.beautyServiceIdFk}}' bindtap='goAppraiseFn'>去评价</view>
+      </view>
+    </view>
+  </view>
+  <view class='orderTime'>
+      <view class='item-info' wx:if="{{beautyInfoOrderTable.orderStatus >=3}}">
+        <view>下单时间：</view>
+        <view>{{beautyInfoOrderTable.orderDateTime}}</view>
+      </view>
+      <view class='item-info' wx:if="{{beautyInfoOrderTable.orderStatus ==2}}">
+        <view>取消时间：</view>
+        <view>{{beautyInfoOrderTable.cancelOrderDateTime}}</view>
+      </view>
+      <view class='item-info' wx:if="{{beautyInfoOrderTable.orderStatus >=3}}">
+        <view>预付款时间：</view>
+        <view>{{beautyInfoOrderTable.prePayDateTime}}</view>
+      </view>
+      <view class='item-info' wx:if="{{beautyInfoOrderTable.orderStatus >=4}}">
+        <view>分配技师时间：</view>
+        <view>{{beautyInfoOrderTable.dispatchDateTime}}</view>
+      </view>
+      <view class='item-info' wx:if="{{beautyInfoOrderTable.orderStatus >=5}}">
+          <view>付尾款时间：</view>
+          <view>{{beautyInfoOrderTable.payDateTime}}</view>
+      </view>
+      <view class='item-info' wx:if="{{beautyInfoOrderTable.orderStatus>=4}}">
+        <view>美容师姓名：</view>
+        <view>{{beautyInfoOrderTable.beautyStaffName}}</view>
+      </view>
+      <view class='item-info' wx:if="{{beautyInfoOrderTable.orderStatus>=4}}">
+        <view>美容师电话：</view>
+        <view>{{beautyInfoOrderTable.beautyStaffPhone}}</view>
+      </view>
+    </view>
+</view>

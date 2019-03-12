@@ -1,0 +1,58 @@
+<view class="container by-order">
+  <view class='content'>
+    <view class='address' bindtap='getAddressFn'>
+      <view wx:if="{{userAddress == ''}}" style=' text-align: center;'><image src='../../assets/img/add.png'></image>请选择服务地址</view>
+      <view wx:else>服务地址: {{userAddress}}</view>
+    </view>
+    <view class='content--header'>
+      <view class='flex-left'>
+        <view class='content--header--img'>
+          <image src='{{starInfo.beautyServiceImageUrl}}' mode='aspectFit'></image>
+        </view>
+        <view class='content--header--info'>
+          <view class='content--header--info--title'>
+            {{starInfo.beautyServiceName}}
+          </view>
+          <view class='content--header--info--money'>
+            <text>￥</text>
+            <text>{{starInfo.prePayAmount}}</text>
+            <text>总价：￥{{starInfo.totalPayAmount}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='content--form'>
+      <view>
+        <view class='flex-left'>会员姓名</view>
+        <view class='flex-right'>{{nickname}}</view>
+      </view>
+    </view>
+    <view class='content--form'>
+      <view>
+        <view class='flex-left'>手机号码</view>
+        <view class='flex-right'>{{phone}}</view>
+      </view>
+    </view>
+    <view class='content--form'>
+      <view>
+        <view class='flex-left'>总价</view>
+        <view class='flex-right'>¥{{starInfo.totalPayAmount}}</view>
+      </view>
+    </view>
+    <view class='content--form'>
+      <view>
+        <view class='flex-left'>预付</view>
+        <view class='flex-right' style='color: #ff2283;'>¥{{starInfo.prePayAmount}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='footer flex-center'>
+    <view class='footer--left flex-left'>
+      <text>实付金额：</text>
+      <text>¥{{starInfo.prePayAmount}}</text>
+    </view>
+    <view class='footer--right flex-center' bindtap='payFn'>
+      付款
+    </view>
+  </view>
+</view>

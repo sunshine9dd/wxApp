@@ -1,0 +1,10 @@
+<view class='container store-list'>
+  <scroll-view scroll-y class='scroll-info'>
+    <view class='store-item' wx:for="{{storeList}}" wx:key="{{index}}" bindtap='goStore'>
+      <view class='flex-left'>
+        {{item}}
+      </view>
+    </view>
+  </scroll-view>
+  <boss-info></boss-info>
+</view>

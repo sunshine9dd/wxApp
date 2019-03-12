@@ -1,0 +1,13 @@
+<!--pages/appraise/appraise.wxml-->
+<view class='appraise'>
+  <view class='header'>
+     <image src='{{beautyInfoOrderTable.beautyServiceImageUrl}}' class='order'></image>
+     <view class='orderName'>
+     {{beautyInfoOrderTable.beautyServiceName}}<view>￥{{beautyInfoOrderTable.totalPayAmount}}</view>
+     </view>
+  </view>
+  <view class='starBox'>服务态度:<image src='../../assets/img/star.png' data-index='{{index+1}}' bindtap='solidStarFn' class='star' wx:for="{{solidStar}}" wx:key="{{key}}"></image><image src='../../assets/img/star_k.png' data-index='{{index+1}}' bindtap='hollowStarFn' class='star' wx:for="{{hollowStar}}" wx:key="{{key}}"></image></view>
+  <textarea  placeholder="请输入评价内容" value='{{evalutionContent}}' bindinput='bindInput'/>
+  <view class='imgBox'><view class='imgList' wx:for="{{imageUrlList}}" wx:key="{{key}}"><image src='{{item}}'></image><image src='../../assets/img/close.png' class='close' data-index='{{index}}' bindtap='delFn'></image></view><view class='add' bindtap='addImgFn' wx:if="{{imageUrlList.length<3}}"><image src='../../assets/img/add.png'></image></view></view>
+  <view class='confirm' bindtap='releaseFn'>发布评论</view>
+</view>

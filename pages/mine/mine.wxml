@@ -1,0 +1,25 @@
+<!--pages/mine/mine.wxml-->
+<view class='mine'>
+<image class='bg' src='../../assets/img/bg2.jpg' mode='widthFix'></image>
+    <view class='item-info'>
+      <view>头像</view>
+      <view><image src='{{avatarUrl}}'></image></view>
+    </view>
+    <view class='item-info'>
+      <view>昵称</view>
+      <view>{{nickName}}</view>
+    </view>
+    <view class='item-info'>
+      <view>性别</view>
+      <view wx:if="{{sex == 1}}">男</view>
+      <view wx:else>女</view>
+    </view>
+    <view class='item-info'>
+      <view>电话</view>
+      <view>{{phone}}</view>
+    </view>
+    <view class='item-info' bindtap='goQR'>
+      <view>邀请码</view>
+      <view><image src='../../assets/img/rightarrow.png' class='right'></image></view>
+    </view>
+</view>

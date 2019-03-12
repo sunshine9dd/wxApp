@@ -1,0 +1,6 @@
+<!--pages/QR/QR.wxml-->
+<view class='QR'>
+<image class='bg' src='../../assets/img/bg1.jpg' mode='widthFix'></image>
+  <view class='h2'>{{inviteCode}}</view>
+  <canvas class='canvas' canvas-id='canvas'></canvas>
+</view>
